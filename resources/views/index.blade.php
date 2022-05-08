@@ -37,7 +37,7 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(<?php if (asset($main)) {echo$main->bc_img
+        <header class="masthead" style="background-image: url(<?php if (isset($main)) {echo$main->bc_img
             # code...
         } ?>);">
             <div class="container">
