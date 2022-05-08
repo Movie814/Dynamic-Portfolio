@@ -40,9 +40,9 @@
         
         <header class="masthead" style="background-image: url({{(@$main->bc_img)?url($main->bc_img):asset("assets/img/bc_img")}})" >
             <div class="container">
-                <div class="masthead-subheading">{{$main->sub_title}}</div>
-                <div class="masthead-heading text-uppercase">{{$main->title}}</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{$main->resume}}">Resume</a>
+                <div class="masthead-subheading">{{(@$main->sub_title)?url($main->sub_title):"Sub Title"}}</div>
+                <div class="masthead-heading text-uppercase">{{(@$main->title)?url($main->title):" The title"}}</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Resume</a>
             </div>
         </header>
         <!-- Services-->
