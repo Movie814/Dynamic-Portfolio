@@ -56,18 +56,18 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="http://127.0.0.1:8000/dash">
+                            <a class="nav-link" href="{{route('dashboard')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="http://127.0.0.1:8000/main">
+                            <a class="nav-link" href="{{route('maindashboard')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                                 Main
                             </a>
-                            <a class="nav-link" href="http://127.0.0.1:8000/portfolio">
+                            {{-- <a class="nav-link" href="http://127.0.0.1:8000/portfolio">
                                 <div class="sb-nav-link-icon"><i class="fas fa-images"></i></div>
                                 Portfolio
-                            </a>
+                            </a> --}}
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                Service
@@ -79,11 +79,11 @@
                                 </nav>
                             </div>
                             
-                            <a class="nav-link" href="http://127.0.0.1:8000/about">
+                            {{-- <a class="nav-link" href="http://127.0.0.1:8000/about">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 About
-                            </a>
-                            <a class="nav-link" href="http://127.0.0.1:8000/contact">
+                            </a> --}}
+                            <a class="nav-link" href="{{route('contact')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
                                 Contacts
                             </a>

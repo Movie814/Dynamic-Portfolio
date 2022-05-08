@@ -24,7 +24,7 @@ Route::get('/service/create/list', [servicePageController::class ,'indexlist'])-
 Route::get('/service/edit/{id}', [servicePageController::class ,'edit'])->name('serviceStore.edit')->middleware('auth');
 Route::post('/service/update/{id}', [servicePageController::class ,'update'])->name('serviceStore.update')->middleware('auth');
 Route::get('/service/delete/{id}', [servicePageController::class ,'delete'])->name('serviceStore.delete')->middleware('auth');
-Route::get('/contact', [PagesController::class ,'contact'])->middleware('auth');
+Route::get('/contact', [PagesController::class ,'contact'])->name('contact')->middleware('auth');
 Route::get('/portfolio', [PagesController::class ,'portfolio'])->middleware('auth');
 Route::post('/contact',[contactController::class, 'store'])->name('contact.store')->middleware('auth');
 
