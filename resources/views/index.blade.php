@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+        <link href="{{secure_asset('css/styles.css')}}" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -37,7 +37,8 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(<?php if(isset($main)) {echo$main->bc_img }?>);">
+        
+        <header class="masthead" style="background-image: url(<?php  echo $main->bc_img ?>);">
             <div class="container">
                 <div class="masthead-subheading">{{$main->sub_title}}</div>
                 <div class="masthead-heading text-uppercase">{{$main->title}}</div>
@@ -609,7 +610,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{{asset('js/scripts.js')}}"></script>
+        <script src="{{secure_asset('js/scripts.js')}}"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
