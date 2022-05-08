@@ -38,7 +38,7 @@
         </nav>
         <!-- Masthead-->
         
-        <header class="masthead" style="background-image: url({{(@$main->bc_img)?url($main->bc_img):asset("public/assets/img/bc_img")}})" >
+        <header class="masthead" style="background-image: url({{(@$main->bc_img)?url($main->bc_img):asset("/assets/img/bc_img")}})" >
             <div class="container">
                 <div class="masthead-subheading">{{(@$main->sub_title)?url($main->sub_title):"Sub Title"}}</div>
                 <div class="masthead-heading text-uppercase">{{(@$main->title)?url($main->title):" The title"}}</div>
