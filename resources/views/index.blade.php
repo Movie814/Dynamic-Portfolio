@@ -37,9 +37,7 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(<?php if (isset($main)) {echo$main->bc_img
-            # code...
-        } ?>);">
+        <header class="masthead" style="background-image: url(<?php if(isset($main)) {echo$main->bc_img }?>);">
             <div class="container">
                 <div class="masthead-subheading">{{$main->sub_title}}</div>
                 <div class="masthead-heading text-uppercase">{{$main->title}}</div>
