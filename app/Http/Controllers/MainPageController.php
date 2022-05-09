@@ -12,6 +12,7 @@ class MainPageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function main(){
+        $main= new Main();
         $main= Main::first();
          return view('main',compact('main'));
      }
