@@ -24,9 +24,9 @@ Route::get('/service/create/list', [servicePageController::class ,'indexlist'])-
 Route::get('/service/edit/{id}', [servicePageController::class ,'edit'])->name('serviceStore.edit')->middleware('auth');
 Route::post('/service/update/{id}', [servicePageController::class ,'update'])->name('serviceStore.update')->middleware('auth');
 Route::get('/service/delete/{id}', [servicePageController::class ,'delete'])->name('serviceStore.delete')->middleware('auth');
-Route::get('/contact', [PagesController::class ,'contact'])->name('contact');
+Route::get('/dash/contact', [PagesController::class ,'contact'])->name('contact');
 Route::get('/portfolio', [PagesController::class ,'portfolio'])->middleware('auth');
-Route::post('/contact/message',[contactController::class, 'store'])->name('contact.store');
+Route::post('/contact',[contactController::class, 'store'])->name('contact.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
