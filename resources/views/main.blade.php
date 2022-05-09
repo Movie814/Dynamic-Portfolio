@@ -20,6 +20,7 @@
                
                 <img style="height: 30vh" src="{{(@$main->bc_img)?url($main->bc_img):asset('storage/app/public/img/bc_img.jpg')}}">
                 
+                
                 <input type="file" class="mt-3 form-control" name="bc_img" id="bc_img" >
                 
             </div>
