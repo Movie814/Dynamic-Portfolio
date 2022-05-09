@@ -42,8 +42,8 @@
         
         <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):asset('/assets/img/bc_img.jpg') ?>)" >
             <div class="container">
-                <div class="masthead-subheading">My First</div>
-                <div class="masthead-heading text-uppercase">WebSITe</div>
+                <div class="masthead-subheading">{{(@$main->title)?$main->title:"The Title"}}</div>
+                <div class="masthead-heading text-uppercase">{{(@$main->sub_title)?$main->sub_title:"Sub Title"}}</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Resume</a>
             </div>
         </header>

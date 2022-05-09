@@ -29,7 +29,7 @@ class MainPageController extends Controller
     {
         $main= new Main();
         $main=Main::first();
-        // $main->title=$request->title;
+        $main->title=$request->title;
         $main->sub_title=$request->sub_title;
         if($request->file('bc_img')){
             $img_file=$request->file('bc_img');
