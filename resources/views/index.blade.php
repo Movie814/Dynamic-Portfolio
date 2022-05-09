@@ -37,7 +37,7 @@
             </div>
         </nav>
         <!-- Masthead-->
-        @foreach ($main as $main)
+        
             
         
         <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):secure_asset("/assets/img/bc_img") ?>)" >
@@ -47,7 +47,7 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Resume</a>
             </div>
         </header>
-        @endforeach
+        
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
