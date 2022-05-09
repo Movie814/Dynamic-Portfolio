@@ -18,9 +18,9 @@
             <div class="form-group col-md-4 mt-3">
                 <h3>Background Image</h3>
                
-                <img style="height: 30vh" src="{{(@$main->bc_img)?url($main->bc_img):asset('storage/app/public/img/bc_img.jpg')}}">
+                <img style="height: 30vh" src="{{(@$main->bc_img)?url($main->bc_img):asset('/asssets/img/bc_img.jpg')}}">
                 
-                
+
                 <input type="file" class="mt-3 form-control" name="bc_img" id="bc_img" >
                 
             </div>
