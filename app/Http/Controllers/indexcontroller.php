@@ -14,10 +14,5 @@ class indexcontroller extends Controller
         $viewdata=service::all()->take(3);
         return view('index')->with(compact('main','viewdata'));
     }
-    public function store(){
-      
-        $contact_form_data=request()->all();
-        Mail::to('moviedownload814@gmail.com')->send(new contactMail($contact_form_data));
-       return redirect()->back();
-     }
+    
 }
