@@ -34,17 +34,17 @@ class MainPageController extends Controller
         if($request->hasfile('bc_img')){
             $img_file=$request->file('bc_img');
             $ext=$img_file->getClientOriginalExtension();
-            $img_name='bc_img'.$ext;
+            $img_name='bc_img.'.$ext;
             $img_file->move('uploads/imgs',$img_name);
-            $main->bc_img='public/uploads/imgs.'.$img_name;
+            $main->bc_img='public/uploads/imgs/'.$img_name;
 
         }
         if($request->hasfile('resume')){ 
             $pdf_file=$request->file('resume');
             $pdf_file_ext=$pdf_file->getClientOriginalExtension();
-            $pdf_file_name='resume'.$pdf_file_ext;
+            $pdf_file_name='resume.'.$pdf_file_ext;
             $pdf_file->move('uploads/resume' ,$pdf_file_ext);
-            $main->resume='public/uploads/resume.'.$pdf_file_name ;
+            $main->resume='public/uploads/resume/'.$pdf_file_name ;
 
         }
         $main->save();
