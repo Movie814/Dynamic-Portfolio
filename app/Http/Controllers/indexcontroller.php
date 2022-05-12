@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Main;
 use App\Models\service;
-
+use App\Mail\contactMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class indexcontroller extends Controller
@@ -13,4 +14,10 @@ class indexcontroller extends Controller
         $viewdata=service::all()->take(3);
         return view('index')->with(compact('main','viewdata'));
     }
+    public function store(){
+      
+        $contact_form_data=request()->all();
+        Mail::to('moviedownload814@gmail.com')->send(new contactMail($contact_form_data));
+       return redirect()->back();
+     }
 }
