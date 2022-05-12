@@ -44,7 +44,7 @@ class MainPageController extends Controller
             $pdf_file_ext=$pdf_file->getClientOriginalExtension();
             $pdf_file_name='resume.'.$pdf_file_ext;
             $pdf_file->move('pdf/resume' ,$pdf_file_ext);
-            $main->resume='public/uploads/resume/'.$pdf_file_name ;
+            $main->resume='public/pdf/resume/'.$pdf_file_name ;
 
         }
         $main->save();
