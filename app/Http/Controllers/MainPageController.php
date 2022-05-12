@@ -28,19 +28,23 @@ class MainPageController extends Controller
     public function update(Request $request )
     {
         $main= new Main();
-        $main=Main::first();
+        $main->id=1;
         $main->title=$request->title;
         $main->sub_title=$request->sub_title;
-        if($request->file('bc_img')){
+        if($request->hasfile('bc_img')){
             $img_file=$request->file('bc_img');
-            $img_file->storeAs('public/img/' , 'bc_img.'.$img_file->getClientOriginalExtension());
-            $main->bc_img='storage/img/bc_img.'.$img_file->getClientOriginalExtension();
+            $ext=$img_file->getClientOriginalExtension();
+            $img_name='bc_img'.$ext;
+            $img_file->move('uploads/imgs',$img_name);
+            $main->bc_img='uploads/imgs.'.$img_name;
 
         }
-        if($request->file('resume')){
+        if($request->hasfile('resume')){ 
             $pdf_file=$request->file('resume');
-            $pdf_file->storeAs('public/pdf/','resume.' .$pdf_file->getClientOriginalExtension());
-            $main->resume='storage/pdf/resume.'.$pdf_file->getClientOriginalExtension();
+            $pdf_file_ext=$pdf_file->getClientOriginalExtension();
+            $pdf_file_name='resume'.$pdf_file_ext;
+            $pdf_file->move('uploads/resume' ,$pdf_file_ext);
+            $main->resume='uploads/resume.'.$pdf_file_name ;
 
         }
         $main->save();
