@@ -12,6 +12,6 @@ class contactController extends Controller
       
        $contact_form_data=request()->all();
        Mail::to('moviedownload814@gmail.com')->send(new contactMail($contact_form_data));
-      return redirect()->route('fontindex');
+      return redirect()->back();
     }
 }
