@@ -18,7 +18,7 @@ class indexcontroller extends Controller
         $a=$request->name;
         $b=$request->email;
         $c=$request->phone;
-        $d=$request->message;
+        $d=$request->msg;
         $sub="Hello Dev";
         
         $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'message'=>"$d"];
