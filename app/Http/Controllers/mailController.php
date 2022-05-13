@@ -18,7 +18,7 @@ class mailController extends Controller
             $mes->from('moviedownload814@gmail.com');
             
         });
-        return redirect()->back();
+        return redirect()->route('fontindex');
         
     }
 }
