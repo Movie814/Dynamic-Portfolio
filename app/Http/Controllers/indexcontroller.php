@@ -22,7 +22,7 @@ class indexcontroller extends Controller
         // $user['to']='moviedownload814@gmail.com';
         Mail::send('mail',$data,function ($mes) use ($data){
             $mes-> to($data['email']);
-            $mes->subject('HEY DEV');
+            $mes->subject($data['name']);
             $mes->from('moviedownload814@gmail.com');
         });
         return redirect()->back();
