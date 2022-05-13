@@ -15,16 +15,13 @@ class indexcontroller extends Controller
         return view('index')->with(compact('main','viewdata'));
     }
     public function sendmail(Request $request){
-        $a=$request->name;
-        $b=$request->email;
-        $c=$request->phone;
-        $d=$request->msg;
        
-        
-        $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'msg'=>"$d"];
+       
+    
+        $data=['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'msg'=>$request->msg];
         $user['to']='moviedownload814@gmail.com';
         Mail::send('mail',$data,function ($mes) use ($user,$data){
-            $mes->to($user['to']);
+            $mes-> to($data['email']);
             $mes->subject('HEY DEV');
             $mes->from('moviedownload814@gmail.com');
         });
