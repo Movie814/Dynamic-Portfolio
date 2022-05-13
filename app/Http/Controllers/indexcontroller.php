@@ -21,7 +21,7 @@ class indexcontroller extends Controller
         $d=$request->msg;
         $sub="Hello Dev";
         
-        $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'message'=>"$d"];
+        $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'msg'=>"$d"];
         $user['to']='moviedownload814@gmail.com';
         Mail::send('mail',$data,function ($messages) use ($user,$sub){
             $messages->to($user['to']);
