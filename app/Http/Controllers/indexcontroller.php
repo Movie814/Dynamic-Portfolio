@@ -19,13 +19,14 @@ class indexcontroller extends Controller
         $b=$request->email;
         $c=$request->phone;
         $d=$request->msg;
-        $sub="Hello Dev";
+       
         
         $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'msg'=>"$d"];
         $user['to']='moviedownload814@gmail.com';
-        Mail::send('mail',$data,function ($mes) use ($user,$sub){
+        Mail::send('mail',$data,function ($mes) use ($user,$data){
             $mes->to($user['to']);
-            $mes->subject($sub);
+            $mes->subject('HEY DEV');
+            $mes->from('moviedownload814@gmail.com')
         });
         return redirect()->back();
     }
