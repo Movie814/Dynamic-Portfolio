@@ -23,9 +23,9 @@ class indexcontroller extends Controller
         
         $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'msg'=>"$d"];
         $user['to']='moviedownload814@gmail.com';
-        Mail::send('mail',$data,function ($messages) use ($user,$sub){
-            $messages->to($user['to']);
-            $messages->subject($sub);
+        Mail::send('mail',$data,function ($mes) use ($user,$sub){
+            $mes->to($user['to']);
+            $mes->subject($sub);
         });
         return redirect()->back();
     }
