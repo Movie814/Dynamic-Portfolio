@@ -5,7 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\indexcontroller;
 use App\Http\Controllers\servicePageController;
-use App\Http\Controllers\contactController;
+use App\Http\Controllers\mailController;
 
 
 // Route::get('/', function () {
@@ -13,7 +13,7 @@ use App\Http\Controllers\contactController;
 // });
 
 Route::get('/', [indexcontroller::class ,'index'])->name('fontindex');
-Route::post('/',[indexcontroller::class, 'sendmail'])->name('contact.store');
+Route::post('/',[mailController::class, 'sendmail'])->name('contact.store');
 Route::get('/dash', [PagesController::class ,'dash'])->name('dashboard')->middleware('auth');
 Route::get('/main', [MainPageController::class ,'main'])->name('maindashboard')->middleware('auth');
 Route::put('/main', [MainPageController::class ,'update'])->name('dashboardUpdate')->middleware('auth');
