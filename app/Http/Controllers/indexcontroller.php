@@ -14,5 +14,19 @@ class indexcontroller extends Controller
         $viewdata=service::all()->take(3);
         return view('index')->with(compact('main','viewdata'));
     }
+    public function sendmail(Request $r){
+        $a=$r->name;
+        $b=$r->email;
+        $c=$r->phone;
+        $d=$r->message;
+        
+        $data=['name'=>"$a",'email'=>"$b",'phone'=>"$c",'message'=>"$d"];
+        $user['to']='moviedownload814@gmail.com';
+        Mail::send('mail',$data,function ($messages) use ($user){
+            $messages->to($user['to']);
+            $messages->subject('Hello Dev');
+        });
+        return redirect()->back();
+    }
     
 }

@@ -13,6 +13,7 @@ use App\Http\Controllers\contactController;
 // });
 
 Route::get('/', [indexcontroller::class ,'index'])->name('fontindex');
+Route::post('/',[indexcontroller::class, 'sendmail'])->name('contact.store');
 Route::get('/dash', [PagesController::class ,'dash'])->name('dashboard')->middleware('auth');
 Route::get('/main', [MainPageController::class ,'main'])->name('maindashboard')->middleware('auth');
 Route::put('/main', [MainPageController::class ,'update'])->name('dashboardUpdate')->middleware('auth');
@@ -26,7 +27,7 @@ Route::post('/service/update/{id}', [servicePageController::class ,'update'])->n
 Route::get('/service/delete/{id}', [servicePageController::class ,'delete'])->name('serviceStore.delete')->middleware('auth');
 Route::get('/contact', [PagesController::class ,'contact'])->name('contact');
 Route::get('/portfolio', [PagesController::class ,'portfolio'])->middleware('auth')->middleware('auth');
-Route::post('/sendmail',[contactController::class, 'store'])->name('contact.store');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
