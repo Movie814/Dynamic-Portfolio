@@ -20,7 +20,7 @@ class indexcontroller extends Controller
     
         $data=['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'msg'=>$request->msg];
         // $user['to']='moviedownload814@gmail.com';
-        Mail::send('mail',$data,function ($mes) use ($user,$data){
+        Mail::send('mail',$data,function ($mes) use ($data){
             $mes-> to($data['email']);
             $mes->subject('HEY DEV');
             $mes->from('moviedownload814@gmail.com');
