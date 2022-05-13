@@ -331,7 +331,7 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="contactForm" action="{{url('/')}}"  method="post">
+                <form id="contactForm" action="{{url('/')}}"  method="POST">
                     @csrf
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
