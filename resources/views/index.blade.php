@@ -40,11 +40,11 @@
         
             
         
-        <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):asset('/assets/img/bc_img.jpg') ?>)" >
+        <header class="masthead" style="background-image: url(<?php echo {{(@$main->bc_img)?url($main->bc_img):asset('/assets/img/bc_img.jpg')}} ?>)" >
             <div class="container">
                 <div class="masthead-subheading">{{(@$main->title)?$main->title:"This Is Title"}}</div>
                 <div class="masthead-heading text-uppercase">{{(@$main->sub_title)?$main->sub_title:"This Is Sub Title"}}</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Resume</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):asset('/assets/img/resume.pdf')}}">Resume</a>
             </div>
         </header>
         
