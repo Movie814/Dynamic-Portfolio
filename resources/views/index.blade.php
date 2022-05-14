@@ -40,7 +40,7 @@
         
             
         
-        <header class="masthead" style="background-image: url(<?php echo {{(@$main->bc_img)?url($main->bc_img):asset('/assets/img/bc_img.jpg')}} ?>)" >
+        <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):asset('/assets/img/bc_img.jpg') ?>)" >
             <div class="container">
                 <div class="masthead-subheading">{{(@$main->title)?$main->title:"This Is Title"}}</div>
                 <div class="masthead-heading text-uppercase">{{(@$main->sub_title)?$main->sub_title:"This Is Sub Title"}}</div>
