@@ -28,7 +28,7 @@ class MainPageController extends Controller
     public function update(Request $request )
     {
         $main= new Main();
-        $main=Main::find(1);
+        $main=Main::first();
         $main->title=$request->title;
         $main->sub_title=$request->sub_title;
         if($request->hasfile('bc_img')){
