@@ -29,8 +29,8 @@ Route::get('/contact', [PagesController::class ,'contact'])->name('contact');
 Route::get('/portfolio', [PagesController::class ,'portfolio'])->middleware('auth')->middleware('auth');
 
 
-Route::get('/dashboard', function () {
+Route::get('/dboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth'])->name('dboard');
 
 require __DIR__.'/auth.php';

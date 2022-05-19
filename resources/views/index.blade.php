@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{secure_asset('css/styles.css')}}" rel="stylesheet" />
+        <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -40,11 +40,11 @@
         
             
         
-        <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):asset('/assets/img/bc_img.jpg') ?>)" >
+        <header class="masthead" style="background-image: url(<?php echo $main->bc_img ?>)" >
             <div class="container">
-                <div class="masthead-subheading">{{(@$main->title)?$main->title:"This Is Title"}}</div>
-                <div class="masthead-heading text-uppercase">{{(@$main->sub_title)?$main->sub_title:"This Is Sub Title"}}</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):asset('/assets/img/resume.pdf')}}">Resume</a>
+                <div class="masthead-subheading">{{$main->title}}</div>
+                <div class="masthead-heading text-uppercase">{{$main->sub_title}}</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{$main->resume}}">Resume</a>
             </div>
         </header>
         
@@ -201,7 +201,7 @@
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-1/270934884_1068895497229214_7509983351863630833_n.jpg?stp=dst-jpg_p160x160&_nc_cat=104&ccb=1-6&_nc_sid=7206a8&_nc_eui2=AeFqWuLDPfjitTEQQ2ygYYKzWmIc404_2TJaYhzjTj_ZMvU_Ay5yyFo2gE6iauzILijx4sikB6yshP0L-zViQgdc&_nc_ohc=zOgkiLFgKVgAX9WGxPt&_nc_ht=scontent.fdac22-1.fna&oh=00_AT-QD_m8ISa-cca9KGP1lpxbJ1pJGzfdT1cIxPz3uNQItg&oe=6282F000" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-1/240819751_989756165143148_6949884887223970085_n.jpg?stp=dst-jpg_p160x160&_nc_cat=101&ccb=1-6&_nc_sid=7206a8&_nc_eui2=AeFDM5o00qv7z8bHyUsNxbSZ6MWyzfCb-xPoxbLN8Jv7E1WITkafaoLjLu4xivNreGD4vDnm0PScYXQuBitYZek6&_nc_ohc=eK0YYRmrV9gAX91jFXB&tn=BwQVAVzTDINdYrNN&_nc_ht=scontent.fdac22-1.fna&oh=00_AT8YGU7UPG-s6NSfcgzYj_joM4IJrLhqVNf2EeKd90xEAQ&oe=628B5A65" alt="fbpic" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2009-2011</h4>
@@ -613,7 +613,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{{secure_asset('js/scripts.js')}}"></script>
+        <script src="{{asset('js/scripts.js')}}"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
